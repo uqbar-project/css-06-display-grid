@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+main {
+  height: 100vh;
+  background-color: cadetblue;
+  display: grid;
+  gap: 5px;
+
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr 4fr 1fr;
+
+  grid-template-areas:
+    "header  header"
+    "menu    contenido"
+    ".       contenido"
+    "footer  footer";
+}
+
+main > * {
+  background-color: indianred;
+  text-align: center;
+  color: white;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: menu;
+}
+
+article {
+  grid-area: contenido;
+}
+
+
+footer {
+  grid-area: footer;
+}

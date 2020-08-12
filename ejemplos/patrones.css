@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  background-color: cadetblue;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(2, 100px minmax(50px, 100px) minmax(min-content, max-content) minmax(80px, 1fr));
+}
+
+  main
+  > * {
+  background-color: indianred;
+  text-align: center;
+  color: white;
+}

@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+main {
+  height: 100vh;
+  background-color: cadetblue;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: [menu-start] 1fr [menu-end contenido-start] 4fr [contenido-end];
+  grid-template-rows:
+    [header-start]
+    1fr
+    [header-end contenido-start]
+    4fr
+    [menu-end]
+    4fr
+    [footer-start]
+    1fr
+    [footer-end];
+
+  grid-template-areas:
+    "header  header"
+    "menu    contenido"
+    ".       contenido"
+    "footer  footer";
+}
+
+main > * {
+  background-color: indianred;
+  text-align: center;
+  color: white;
+}
+
+header {
+  grid-column: menu-start/ contenido-end;
+}
+
+nav {
+  grid-row: header-end / menu-end;
+}
+article {
+  grid-row: contenido-start / footer-start;
+}
+
+footer {
+  grid-column: menu-start / contenido-end;
+  grid-row: footer-start / footer-end;
+}

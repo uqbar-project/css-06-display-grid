@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+main {
+  height: 100vh;
+  background-color: cadetblue;
+  display: grid;
+  gap: 2px;
+  grid-template: repeat(5, 100px) / repeat(3, 200px);
+}
+
+div {
+  background-color: indianred;
+  text-align: center;
+  color: white;
+}
+
+div:nth-child(10) {
+  color: black;
+  background-color: gold;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+
+div:nth-child(7) {
+  color: black;
+  background-color: chartreuse;
+  grid-row: 3 / span 3;
+}

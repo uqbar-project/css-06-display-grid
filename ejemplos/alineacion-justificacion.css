@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  background-color: cadetblue;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+}
+
+section {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(4, 50px);
+  margin-bottom: 20px;
+  height: 300px;
+  border: solid 3px white;
+}
+
+.alineacion {
+  align-items: center;
+  align-content: start;
+  /* align-content: center; */
+  /* align-content: end; */
+  /* align-content: stretch; */
+  /* align-content: space-around; */
+  /* align-content: space-between; */
+  /* align-content: space-evenly; */
+}
+
+div {
+  background-color: indianred;
+}
+
+.alineacion > div:nth-child(n + 10) {
+  background-color: peru;
+  align-self: stretch;
+}
+
+.alineacion > div:nth-child(4) {
+  background-color: darkblue;
+  align-self: start;
+}
+
+.alineacion > div:nth-child(5) {
+  background-color: darkred;
+  align-self: center;
+}
+
+.alineacion > div:nth-child(6) {
+  background-color: slateblue;
+  align-self: end;
+}
+
+.justificacion {
+  justify-items: center;
+  justify-content: start;
+  /* justify-content: center; */
+  /* justify-content: end; */
+  /* justify-content: stretch; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+}
+
+.justificacion > div:nth-child(n + 10) {
+  background-color: peru;
+  justify-self: stretch;
+}
+
+.justificacion > div:nth-child(4) {
+  background-color: darkblue;
+  justify-self: start;
+}
+
+.justificacion > div:nth-child(5) {
+  background-color: darkred;
+  justify-self: center;
+}
+
+.justificacion > div:nth-child(6) {
+  background-color: slateblue;
+  justify-self: end;
+}
+.justificacion > div:nth-child(n + 10) {
+  background-color: peru;
+  justify-self: stretch;
+}

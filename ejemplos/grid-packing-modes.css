@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  background-color: cadetblue;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+}
+
+main {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  grid-auto-flow: row;
+  /* grid-auto-flow: row dense; */
+  /* grid-auto-flow: column; */
+  /* grid-auto-flow: column dense; */
+  grid-auto-rows: 100px;
+  grid-auto-columns: 100px;
+}
+
+div {
+  background-color: indianred;
+}
+
+div:nth-child(5) {
+  background-color: midnightblue;
+  grid-column: 4 / span 2;
+}
+
+div:nth-child(8) {
+  background-color: darkviolet;
+  grid-row: 2 / span 2;
+}
