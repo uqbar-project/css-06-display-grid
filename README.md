@@ -9,9 +9,9 @@ Antes de empezar a ver ejemplos, es necesario que incorporemos algunos conceptos
 
 ![conceptos](./images/conceptos-grid.png)
 
-### Grid Context: Grid Conteiner y Grid Item
+### Grid Context: Grid Container y Grid Item
 
-Al elemento que le apliquemos la propiedad `display:grid` o `display:inline-grid`, hará de _"rejilla/contenedor"_ y es el que conocemos como **Grid Conteiner**, y cada uno de los elementos (directos) que se encuentren dentro serán nuestros **Grid Items**. Esta relación _parent/children_ define al **Grid Context**.
+Al elemento que le apliquemos la propiedad `display:grid` o `display:inline-grid`, hará de _"rejilla/contenedor"_ y es el que conocemos como **Grid Container**, y cada uno de los elementos (directos) que se encuentren dentro serán nuestros **Grid Items**. Esta relación _parent/children_ define al **Grid Context**.
 
 ### Grid Line
 
@@ -40,7 +40,7 @@ Para realizar el ejemplo final, primero vamos a ver ejemplos más específicos, 
 
 ## Crear Grid Context
 
-Empecemos creando un **Grid Conteiner** y sus respectivos **Grid Items**.
+Empecemos creando un **Grid Container** y sus respectivos **Grid Items**.
 
 En nuestro archivo `html` escribimos:
 
@@ -59,7 +59,7 @@ En nuestro archivo `html` escribimos:
 </main>
 ```
 
-y para convertir al `main` en un grid conteiner le agregamos `display:grid` en el `css`.
+y para convertir al `main` en un grid container le agregamos `display:grid` en el `css`.
 
 ```css
 main {
@@ -81,7 +81,7 @@ div {
 
 ### Creando columnas y filas
 
-Bien, por ahora, no notamos grandes cambios, parecería que nuestros ítems siguen con un _display block_. Para ver que no es así, añadimos al grid conteiner la propiedad **gap** que acepta unidades de medidas, y es propia del **Display Grid**.
+Bien, por ahora, no notamos grandes cambios, parecería que nuestros ítems siguen con un _display block_. Para ver que no es así, añadimos al grid container la propiedad **gap** que acepta unidades de medidas, y es propia del **Display Grid**.
 
 en el `css`
 
@@ -145,7 +145,7 @@ Abramos las herramientas que nos brinda el navegador _Mozilla Firefox_ como lo h
 
 ![grid-lines](./images/grid-lines.gif)
 
-En el _inspector de DOM y estilos_, buscamos al **grid conteiner** en nuestro caso es el `main`, activamos la opción _grid_ para que nos muestre la grilla.
+En el _inspector de DOM y estilos_, buscamos al **grid container** en nuestro caso es el `main`, activamos la opción _grid_ para que nos muestre la grilla.
 
 De esta forma podemos ver las **grid-lines** y cómo son numeradas dentro de nuestro contexto.
 
@@ -364,7 +364,7 @@ footer {
 }
 ```
 
-Si llegáramos a actualizar la vista en el navegador, tendríamos los `grid items` ubicados por cualquier parte. Esto es porque falta decirle al `grid conteiner` cómo queremos que los posicione.
+Si llegáramos a actualizar la vista en el navegador, tendríamos los `grid items` ubicados por cualquier parte. Esto es porque falta decirle al `grid container` cómo queremos que los posicione.
 
 Añadimos en la regla del selector `main` del `css`, una nueva propiedad, **grid-template-areas**.
 
@@ -770,7 +770,7 @@ También conocidos como **Eje de Columna** y **Eje de Fila** respectivamente.
 
 ### Alineación en el Eje de Bloque
 
-Estableciendo en un `grid conteiner`, la propiedad **align-items**, vamos a indicarle en qué posición, del `eje de bloque` queremos que se ubiquen todos sus `grid items`.
+Estableciendo en un `grid container`, la propiedad **align-items**, vamos a indicarle en qué posición, del `eje de bloque` queremos que se ubiquen todos sus `grid items`.
 A su vez y de forma individual, podemos indicarle a cada `grid item` la posición que queremos que ocupe. Para ellos tenemos la propiedad **align-self**. Una vez, establecida la propiedad **align-self** anula cualquier valor establecido por **align-items**.
 
 Ambas propiedades pueden tomar estos valores
@@ -835,7 +835,7 @@ Los valores aceptados son:
 - first baseline
 - last baseline
 
-Para poder darnos cuenta agreguemos un borde y una altura a los `grid conteiners`.
+Para poder darnos cuenta agreguemos un borde y una altura a los `grid containers`.
 
 
 ![align-content-justify-content](./images/align-content-justify-content.gif)
@@ -861,11 +861,11 @@ Para los que quieran profundizar sobre la importancia de pensar diseños para un
 
 ## Resumen
 
-Haciendo un reconto de todo, para empezar a usar **Grid** necesitamos establecer el **Grid Conteiner**
+Haciendo un reconto de todo, para empezar a usar **Grid** necesitamos establecer el **Grid Container**
 
 - **display:grid** o **display:inline-grid**: habilitan el modo de layout de grid.
 
-Aquellos elementos que sean _"hijos directos"_ del **Grid Conteiner** los llamamos **Grid Items** y ambos conformaban al **Grid Context**.
+Aquellos elementos que sean _"hijos directos"_ del **Grid Container** los llamamos **Grid Items** y ambos conformaban al **Grid Context**.
 
 Aprendimos a poder ubicar nuestros **Grid Items**, referenciando a **número** o  **nombre** de líneas.
 
